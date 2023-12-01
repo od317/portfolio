@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import {useEffect} from 'react'
 import Blobs from '../blobs/Blobs'
 import { useWindowScroll } from "@uidotdev/usehooks"
-import v from '../../assets/v.mp4'
 import HeaderText from './HeaderText.Jsx'
 
 function Header() {
@@ -79,9 +78,7 @@ function Header() {
 
            <Blobs></Blobs>
       </div>
-      <div className=' translate-y-[-100%] absolute w-screen h-screen flex items-center justify-center  '>
-          <video autoPlay loop muted className='w-[25%] translate-x-[50%] -z-10 translate-y-[50%]  ' src={v}></video>
-      </div> */}
+ */}
       </>
     )
 }

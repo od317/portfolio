@@ -1,13 +1,11 @@
 import { document } from 'postcss'
 import React , { useRef,useEffect } from 'react'
-import v from '../../assets/v.mp4'
 
 function HeaderText() {
   const r1 = useRef(null)
   const r11 = useRef(null)
   const r2 = useRef(null)
   const r3 = useRef(null)
-  const r4 = useRef(null)
   const textRef = useRef(null)
   useEffect(()=>{
 
@@ -41,10 +39,6 @@ function HeaderText() {
       setTimeout(()=>{
           r2.current.style.transform = 'rotateX(0deg)'
       },1300)
-      setTimeout(()=>{
-        r4.current.style.transform = 'rotateX(0deg)'
-        console.log(r4.current)
-      },1800)
     },500)
 
     window.addEventListener('mousemove',(e)=>{
@@ -59,9 +53,6 @@ function HeaderText() {
   
   return (
     <>
-    <div ref={r4} style={{transform:'rotateX(-90deg)'}} className=' transition-all duration-[500ms]  h-screen w-screen absolute t3  flex items-center justify-center'>
-      <video  autoPlay loop muted className='w-[25%]  translate-x-[50%]  translate-y-[50%]  ' src={v}></video>
-    </div>
     <div className='w-screen h-screen sticky  top-0 text-[400%] flex flex-col items-center justify-center'>
     <div ref={r1}  className='flex flex-row  z-[3]  translate-y-[100%] transition-all duration-[400ms]  text-white  items-center justify-center text-center w-full'>
         <div  ref={r11} style={{transform:'rotateX(-90deg)'}} className='w-full transition-all duration-[900ms] items-center justify-center '>
