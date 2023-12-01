@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    overflow-x: hidden;
+    background: #232323;
+    perspective: 20px;
+    perspective: 100px;
+}
+
