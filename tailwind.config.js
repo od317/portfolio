@@ -12,7 +12,7 @@ export default {
         current: 'currentColor',
        'white': '#ffffff',
        'dark':{
-        1:'#232323'
+        1:'#121212'
        }
     },
     extend: {
