@@ -1,13 +1,13 @@
 import React from 'react'
 import { Parallax } from 'react-scroll-parallax'
 import { useParallax } from 'react-scroll-parallax'
-function ProjectsLayout() {
+function ProjectsLayout({pro}) {
   const {ref} = useParallax({speed:15})
   return (
     <>
       
-        <div className=" sticky top-[-5%]  flex-col  bg-dark-1 border-t-[1px] border-white  flex items-center justify-center  text-white text-[350%] pb-[20%] pt-[15%]">
-                              <div className=" relative w-screen text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
+        <div ref={pro} id='Projects' className=" sticky top-[-5%] w-full flex-col  bg-dark-1 border-t-[1px] border-white  flex items-center justify-center  text-white text-[350%] pb-[20%] pt-[15%]">
+                              <div className=" relative w-full text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
                                 Projects
                               </div>
         </div>

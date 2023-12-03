@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef,useState } from 'react'
 import {useEffect} from 'react'
 import Blobs from './components/blobs/Blobs'
 import Header from './components/Header/Header'
@@ -8,15 +8,17 @@ import ContactLayout from './components/contact/ContactLayout'
 import NavLayout from './components/nav/NavLayout'
 
 function App() {
-   
-   
- 
+ const [p,setP] = useState(0)
+ const pro = useRef(null)
+ useEffect(()=>{
+     setP(document.getElementById('Projects').offsetTop)
+ })
  return(<>
-     <NavLayout></NavLayout>
-     <div className='px-[2%]'>
+     <NavLayout p={p} ></NavLayout>
+     <div className=' px-[2%] flex flex-col items-center'>
           <ParallaxProvider>
                <Header></Header>
-               <ProjectsLayout></ProjectsLayout>
+               <ProjectsLayout pro={pro} ></ProjectsLayout>
                <ContactLayout></ContactLayout>
           </ParallaxProvider>
      </div>
