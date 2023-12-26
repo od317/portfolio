@@ -4,11 +4,11 @@ import { useWindowScroll } from "@uidotdev/usehooks"
 import HeaderText from './HeaderText.Jsx'
 
 
-function Header() {
+function Header({p}) {
     
     return (<>
 
-      <HeaderText></HeaderText> 
+      <HeaderText p={p}></HeaderText> 
       </>
     )
 }
