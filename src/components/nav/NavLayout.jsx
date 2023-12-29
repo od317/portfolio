@@ -22,16 +22,16 @@ function NavLayout({h,p,a,c}) {
     before:translate-x-[-48.5%] before:z-[-1] before:absolute before:content-['_'] before:w-full  before:h-full before:bg-dark-1  
     before:border-b-[1px] before:border-b-white px-[2%] z-[20] before:transition-all before:duration-200 `}>
           <div className="  text-white flex flex-row justify-evenly items-center pt-[1.5%] pb-[1.5%] z-[10]  ">
-               <button onClick={()=>{
+               <button className=' outline-none ' onClick={()=>{
                     window.scrollTo({top:h,behavior: 'smooth'})
                }}>Home</button>
-               <button onClick={()=>{
-                    document.getElementById('About').scrollIntoView({ block: 'end',  behavior: 'smooth' })
+               <button className=' outline-none ' onClick={()=>{
+                    window.scrollTo({top:a,behavior: 'smooth'})
                }}>About</button>
-               <button onClick={()=>{
+               <button className=' outline-none ' onClick={()=>{
                     window.scrollTo({top:p,behavior: 'smooth'})
                }}>Projects</button>
-               <button onClick={()=>{
+               <button className=' outline-none ' onClick={()=>{
                     document.getElementById('Contact').scrollIntoView({ block: 'end',  behavior: 'smooth' })
                }}>Contact</button>
           </div> 
