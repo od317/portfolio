@@ -5,10 +5,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Project from "./Project"
 
 const projects = [
-  {img:"https://hitmanforum-v6-s3-uploads.s3.dualstack.us-west-1.amazonaws.com/original/3X/c/9/c966f7639be7ac0114d6a871876dbc9769e49b9e.jpeg"},
-  {img:"https://images.purexbox.com/0c5c9b5424e0f/hitman3-agent.large.jpg"},
-  {img:"https://cdn.vox-cdn.com/thumbor/vhS6l1zxQfFVCCQevQfN_zhXoHk=/0x0:1920x1080/1200x0/filters:focal(0x0:1920x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22394266/hitman_3_berlin_47_gas_station_1920.jpg"},
-  {img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg"}
+  {
+    name:'nordstrom'
+    ,img:"https://hitmanforum-v6-s3-uploads.s3.dualstack.us-west-1.amazonaws.com/original/3X/c/9/c966f7639be7ac0114d6a871876dbc9769e49b9e.jpeg"},
+  {
+    name:'nordstrom'
+    ,img:"https://images.purexbox.com/0c5c9b5424e0f/hitman3-agent.large.jpg"},
+  {
+    name:'nordstrom'
+    ,img:"https://cdn.vox-cdn.com/thumbor/vhS6l1zxQfFVCCQevQfN_zhXoHk=/0x0:1920x1080/1200x0/filters:focal(0x0:1920x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22394266/hitman_3_berlin_47_gas_station_1920.jpg"},
+  {
+    name:'nordstrom'
+    ,img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg"}
 ]
 
 import { useParallax } from 'react-scroll-parallax'
@@ -83,7 +91,8 @@ function ProjectsLayout() {
                               </div>
 
         </div>
-        <div className='translate-y-[-10%]  pt-[2%] '>
+
+        <div className='translate-y-[-10%]  pt-[2%] hidden lg:block '>
         <div  className='flex flex-row justify-evenly z-[6]  translate-y-[20%]  pb-[30%]   w-screen'>
                     <Parallax speed={-10} className='  z-[6] w-[40%]' >
                       <div onMouseOver={()=>{
@@ -107,6 +116,16 @@ function ProjectsLayout() {
                     </Parallax>
         </div>
         </div>
+
+        <div className='grid grid-cols-1 pb-[30%] gap-y-[5%] gap-x-[2%] 
+         md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] lg:hidden'>
+        <Project project={projects[0]}></Project>
+        <Project project={projects[1]}></Project>
+        <Project project={projects[2]}></Project>
+        <Project project={projects[3]}></Project>
+
+        </div>
+
     </>
     )
 }
