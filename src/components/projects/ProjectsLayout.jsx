@@ -57,7 +57,7 @@ function ProjectsLayout() {
 
 
   useEffect(()=>{
-    console.log("svg top is "+document.getElementById('svg1').getBoundingClientRect().top," window is "+ypos)
+    // console.log("svg top is "+document.getElementById('svg1').getBoundingClientRect().top," window is "+ypos)
     window.addEventListener('scroll', handleScroll)
     handleAnimation()
     return () => {
