@@ -57,7 +57,7 @@ function HeaderText({p}) {
   
   return (
     <>
-    <div id="Home" className='w-screen h-screen sticky over top-0 text-[150%] md:text-[300%]  flex flex-col items-center justify-center'>
+    <div id="Home" className='w-screen h-screen sticky over top-0 text-[180%] md:text-[300%]  flex flex-col items-center justify-center'>
   
       <div ref={r1}  className='flex flex-row  z-[3]  translate-y-[100%] transition-all duration-[400ms]  text-white  items-center justify-center text-center w-full'>
           <div  ref={r11} style={{transform:'rotateX(-90deg)'}} className='w-full transition-all duration-[900ms] items-center justify-center '>

@@ -1,4 +1,6 @@
 import React from 'react';
+import AboutHeader from './AboutHeader';
+import Skills from './Skills';
 
 function AboutLayout() {
   return (
@@ -9,6 +11,10 @@ function AboutLayout() {
                     About
                 </label> 
             </div>
+        </div>
+        <div className='z-[10] px-[5%]'>
+            <AboutHeader></AboutHeader>
+            <Skills></Skills>
         </div>
     </>
   )

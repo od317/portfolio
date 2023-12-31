@@ -34,9 +34,9 @@ function HeaderButton({ p }) {
     })
 
     return (
-        <div className="w-full h-screen  items-center hidden md:flex justify-center absolute">
-            <div  ref={projectButton} className="w-[10%] pb-[10%] translate-y-[120%] transition-all rounded-full duration-300 -z-20 relative  overflow-hidden  ">
-                <label ref={projectButtonText} className="w-full h-full absolute flex translate-y-[100%] items-center transition-all duration-300 justify-center text-[100%]  rounded-full text-white">projects</label>
+        <div className="w-full h-screen  items-center flex justify-center absolute">
+            <div  ref={projectButton} className=" w-[22%] pb-[22%] md:w-[10%] md:pb-[10%] translate-y-[120%] transition-all rounded-full duration-300 -z-20 relative  overflow-hidden  ">
+                <label ref={projectButtonText} className="w-full h-full absolute flex md:translate-y-[100%] items-center transition-all duration-300 justify-center text-[100%]  rounded-full text-white">projects</label>
                 <svg className=' absolute ' viewBox="0 0 140 140" preserveAspectRatio="xMinYMin meet">
                         <circle className=' transition-all ease-linear duration-[300ms]' ref={circleSvg} cx="50%" cy="50%" r="69" strokeDashoffset="432.8393859863281" strokeDasharray="432.8393859863281" stroke="white" strokeWidth="1" fill="none" />
                 </svg>    
@@ -50,7 +50,7 @@ function HeaderButton({ p }) {
                     window.scrollTo({ top: p, behavior: 'smooth' })
                 }}
 
-                className="w-[10%] pb-[10%]  translate-y-[122%]  absolute z-20  rounded-full">
+                className="w-[22%] pb-[22%] md:w-[10%] md:pb-[10%]  translate-y-[122%]  absolute z-20  rounded-full">
                 
             </button>
                 
