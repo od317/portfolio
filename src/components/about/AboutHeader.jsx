@@ -16,12 +16,16 @@ function AboutHeader() {
               const [entry] = entries
               if(entry.intersectionRatio>0){
                  entry.target.classList.remove = "skillsContainer"
+                 if(s1.current)
                  gsap.fromTo(s1.current,{transform:'translateY(100%)',opacity:"0%"},{transform:'translateY(0%)',duration:.7,opacity:"100%",delay:0})
                  s1.current = null
+                 if(s2.current)
                  gsap.fromTo(s2.current,{transform:'translateY(100%)',opacity:"0%"},{transform:'translateY(0%)',duration:.7,opacity:"100%",delay:.3})
                  s2.current = null
+                 if(s3.current)
                  gsap.fromTo(s3.current,{transform:'translateY(100%)',opacity:"0%"},{transform:'translateY(0%)',duration:.7,opacity:"100%",delay:.6})
                  s3.current = null
+                 if(s4.current)
                  gsap.fromTo(s4.current,{transform:'translateY(100%)',opacity:"0%"},{transform:'translateY(0%)',duration:.7,opacity:"100%",delay:.9})
                  s4.current = null
                 }
