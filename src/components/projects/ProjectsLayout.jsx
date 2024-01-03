@@ -3,20 +3,32 @@ import { Parallax } from 'react-scroll-parallax'
 import { gsap} from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Project from "./Project"
+import NordStrom from "../../assets/imgs/NordStrom.jpg"
+import PhotosWeb from "../../assets/imgs/PhotosWeb.jpg"
+import WeatherWeb from "../../assets/imgs/WeatherWeb.jpg"
+
 
 const projects = [
   {
-    name:'nordstrom'
-    ,img:"https://hitmanforum-v6-s3-uploads.s3.dualstack.us-west-1.amazonaws.com/original/3X/c/9/c966f7639be7ac0114d6a871876dbc9769e49b9e.jpeg"},
+    name:'nordstrom',
+    img:NordStrom,
+    link:"https://nordstromcloneod317.netlify.app/"
+  },
   {
-    name:'nordstrom'
-    ,img:"https://images.purexbox.com/0c5c9b5424e0f/hitman3-agent.large.jpg"},
+    name:'photos',
+    img:PhotosWeb,
+    link:"https://photoswebsite.netlify.app/"
+  },
   {
-    name:'nordstrom'
-    ,img:"https://cdn.vox-cdn.com/thumbor/vhS6l1zxQfFVCCQevQfN_zhXoHk=/0x0:1920x1080/1200x0/filters:focal(0x0:1920x1080):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22394266/hitman_3_berlin_47_gas_station_1920.jpg"},
+    name:'Weather',
+    img:WeatherWeb,
+    link:"https://comforting-twilight-2c2f14.netlify.app/"
+  },
   {
-    name:'nordstrom'
-    ,img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg"}
+    name:'nordstrom',
+    img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg",
+    link:"https://nordstromcloneod317.netlify.app/"
+  }
 ]
 
 import { useParallax } from 'react-scroll-parallax'
@@ -51,7 +63,7 @@ function ProjectsLayout() {
 
   function handleAnimation(){
       let diff = window.scrollY - document.getElementById('svg1').getBoundingClientRect().top
-      let val = diff >=120 ? 900 - ((diff-100)*1.5) : 900
+      let val = diff >=800 ? 900 - ((diff-800)*1) : 900
       val = Math.max(val,0)
       svg.current.style.strokeDashoffset=val
   }
@@ -118,7 +130,7 @@ function ProjectsLayout() {
         </div>
 
         <div className='grid grid-cols-1 pb-[30%] gap-y-[5%] gap-x-[2%] 
-         md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] lg:hidden'>
+         md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] w-full lg:hidden'>
         <Project project={projects[0]}></Project>
         <Project project={projects[1]}></Project>
         <Project project={projects[2]}></Project>

@@ -17,11 +17,15 @@ function App() {
 
 
  useEffect(()=>{
+     
+
+     
      window.scrollTo({top:0})
      setP(document.getElementById('Projects').offsetTop)
      setH(document.getElementById('Home').offsetTop)
      setA(document.getElementById('Abouts').offsetTop)
  })
+
  return(<>
      <NavLayout p={p} h={h} a={a}></NavLayout>
      <div className=' px-[2%] flex flex-col items-center'>
