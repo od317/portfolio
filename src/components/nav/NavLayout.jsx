@@ -19,19 +19,19 @@ function NavLayout({h,p,a,c}) {
    },[ty])
 
    useEffect(()=>{
-     const options = {root:null,rootMargin:"0px",threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]}
+//      const options = {root:null,rootMargin:"0px",threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]}
 
-     const io = new IntersectionObserver((entries)=>{
-                const [entry] = entries
-                if(entry.boundingClientRect.top>200){
-                    setP(entry.target.id)
-                }
-     },options)
-``
-     io.observe(document.getElementById("Home"))
-     io.observe(document.getElementById("Projects"))
-     io.observe(document.getElementById("Abouts"))
-     io.observe(document.getElementById("Contact"))
+//      const io = new IntersectionObserver((entries)=>{
+//                 const [entry] = entries
+//                 if(entry.boundingClientRect.top>200){
+//                     setP(entry.target.id)
+//                 }
+//      },options)
+// ``
+//      io.observe(document.getElementById("Home"))
+//      io.observe(document.getElementById("Projects"))
+//      io.observe(document.getElementById("Abouts"))
+//      io.observe(document.getElementById("Contact"))
      
 
    },[])
