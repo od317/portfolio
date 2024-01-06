@@ -13,7 +13,8 @@ export default {
        'white': '#ffffff',
        'dark':{
         1:'#121212'
-       }
+       },
+       'theme':'#0E8388'
     },
     extend: {
       animation: {

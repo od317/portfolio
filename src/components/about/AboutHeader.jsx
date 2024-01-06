@@ -37,46 +37,46 @@ function AboutHeader() {
     },[])
 
     return (
-            <div id="" className='w-full skillsContainer text-white z-[10] bg-transparent 
+            <div id="" className='w-full skillsContainer text-theme z-[10] bg-transparent 
                md:flex md:flex-row md:items-center md:justify-between md:pb-[20%]
                grid grid-cols-2 gap-y-[15%] gap-x-[10%] pb-[60%]'>
                     
             <div style={{transform:"translateY(100%)",opacity:'0%'}} ref={s1} className=' md:w-[18%]  relative text-center text-[300%] flex flex-col items-center'>
                 <ion-icon name="timer-outline"></ion-icon>
-                <label className='text-[70%]' htmlFor="">
+                <label className='text-[70%] text-white ' htmlFor="">
                     Fast
                 </label>
-                <label className='text-[32%]' htmlFor="">
+                <label className='text-[32%] text-white ' htmlFor="">
                     Fast load times and lag free interaction, my highest priority.
                 </label>
             </div>
 
             <div style={{transform:"translateY(100%)",opacity:'0%'}} ref={s2} className=' md:w-[18%]  relative text-center text-[300%] flex flex-col items-center'>
                 <ion-icon name="phone-portrait-outline"></ion-icon>
-                <label className='text-[70%]' htmlFor="">
+                <label className='text-[70%] text-white' htmlFor="">
                     Responsive
                 </label>
-                <label className='text-[32%]' htmlFor="">
+                <label className='text-[32%] text-white' htmlFor="">
                     My layouts will work on any device, big or small.
                 </label>
             </div>
 
             <div style={{transform:"translateY(100%)",opacity:'0%'}} ref={s3} className=' md:w-[18%]  relative text-center text-[300%] flex flex-col items-center'>
                 <ion-icon name="bulb-outline"></ion-icon>
-                <label className='text-[70%]' htmlFor="">
+                <label className='text-[70%] text-white' htmlFor="">
                         Intuitive
                 </label>
-                <label className='text-[32%]' htmlFor="">
+                <label className='text-[32%] text-white' htmlFor="">
                         Strong preference for easy to use, intuitive UX/UI.
                 </label>
             </div>
 
             <div style={{transform:"translateY(100%)",opacity:'0%'}} ref={s4} className=' md:w-[18%]  relative text-center text-[300%] flex flex-col items-center'>
                 <ion-icon name="rocket-outline"></ion-icon>
-                <label className='text-[70%]' htmlFor="">
+                <label className='text-[70%] text-white' htmlFor="">
                     Dynamic
                 </label>
-                <label className='text-[32%]' htmlFor="">
+                <label className='text-[32%] text-white' htmlFor="">
                     Websites don't have to be static, I love making pages come to life.
                 </label>
             </div>
