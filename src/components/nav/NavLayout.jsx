@@ -37,7 +37,7 @@ function NavLayout({h,p,a,c}) {
 
   return (<>    
     <div className={`text-white text-center  w-[97%] fixed bg-dark1 
-    before:translate-x-[-48.5%] ${ !ty? "before:translate-y-[-120%]":"" } 
+    before:translate-x-[-48.5%] ${ !ty? "sm:before:translate-y-[-120%]":"" } 
     before:z-[-1] before:absolute before:content-['_'] before:w-full  before:h-full before:bg-dark-1  
     before:border-b-[1px] before:border-b-theme px-[2%] z-[20] before:transition-all before:duration-200 `}>
           <div className="  text-white flex flex-row justify-evenly items-center pt-[3%] pb-[3%] sm:pt-[1.5%] sm:pb-[1.5%] z-[10]  ">
