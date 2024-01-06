@@ -58,4 +58,4 @@ function HeaderButton({ p }) {
     )
 }
 
-export default HeaderButton;
+export default HeaderButton
