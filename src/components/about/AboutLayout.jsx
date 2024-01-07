@@ -5,7 +5,7 @@ import Skills from './Skills';
 function AboutLayout() {
   return (
     <>
-        <div id='Abouts' className=" sm:sticky sm:top-[-5%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] pb-[15%]  pt-[15%]">
+        <div id='Abouts' className=" sm:sticky sm:top-[-5%] mt-[10%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] pb-[15%]  pt-[15%]">
             <div  className="  relative w-full  text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
                 <label className='z-[10] text-theme' htmlFor="">
                     About

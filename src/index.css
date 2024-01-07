@@ -17,13 +17,13 @@ button{
 
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
  
 /* Track */
 ::-webkit-scrollbar-track {
     background:#121212;
-    border-radius: 5px;
+    border-radius: 6px;
 }
  
 /* Handle */
@@ -32,7 +32,3 @@ button{
     transition: all 200ms ease-in-out;
 }
  
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
