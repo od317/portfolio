@@ -6,7 +6,7 @@ import Project from "./Project"
 import NordStrom from "../../assets/imgs/NordStrom.jpg"
 import PhotosWeb from "../../assets/imgs/PhotosWeb.jpg"
 import WeatherWeb from "../../assets/imgs/WeatherWeb.jpg"
-
+import Dsh from "../../hooks/DrawingSvgHook"
 
 const projects = [
   {
@@ -35,7 +35,8 @@ import { useParallax } from 'react-scroll-parallax'
 function ProjectsLayout() {
   const {ref} = useParallax({speed:15})
   const [ypos,setYpos] = useState(0)
-  const svg = useRef()
+  const svg1 = useRef()
+  const svg2 = useRef()
    
   // useLayoutEffect(()=>{
   //   new IntersectionObserver((entries, observer) => {
@@ -57,16 +58,10 @@ function ProjectsLayout() {
 
   // },[])
 
-  function handleScroll(){
-      setYpos(window.scrollY)
-  }
 
-  function handleAnimation(){
-      let diff = window.scrollY - document.getElementById('svg1').getBoundingClientRect().top
-      let val = diff >=800 ? 900 - ((diff-800)*1) : 900
-      val = Math.max(val,0)
-      svg.current.style.strokeDashoffset=val
-  }
+
+  Dsh(svg1,900,"svg2")
+  Dsh(svg2,900,"svg2")
 
   useEffect(()=>{
           ref.current.style.visibility= 'hidden'
@@ -76,16 +71,7 @@ function ProjectsLayout() {
   },[])
 
 
-  useEffect(()=>{
-    // console.log("svg top is "+document.getElementById('svg1').getBoundingClientRect().top," window is "+ypos)
-    window.addEventListener('scroll', handleScroll)
-    if(svg.current)
-       handleAnimation()
-    return () => {
-        window.removeEventListener('scroll', handleScroll)
-    }
 
-  },[ypos])
 
   
   return (
@@ -93,14 +79,19 @@ function ProjectsLayout() {
         
         <div id='Projects' className=" sm:sticky sm:top-[0%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] md:pb-[15%] pb-[30%]  pt-[15%]">
                               <div  className="  relative text-theme w-full  text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
-                                <label id='svg1' className='z-[10]' htmlFor="">
+                                <label id='svg2' className='z-[10] ' htmlFor="">
                                    Projects
                                 </label> 
-                                {/* <div  className=' absolute translate-y-[-27%] ' >
+                                <div  className=' absolute translate-y-[10%] translate-x-[20%] ' >
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
-                                        <polygon ref={svg} className=" " points="10,20 290,20  290,190 10,190" fill="transparent" stroke="white" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
+                                        <polygon ref={svg1} className=" " points=" 150,190 50,20 51,20 250,20   " fill="transparent" stroke="#400D51" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
-                                </div> */}
+                                </div>
+                                <div  className=' absolute translate-y-[-67%] translate-x-[-20%]' >
+                                    <svg  className=" relative w-full text-cneter flex items-cneter  justify-center " width="300" height="200">
+                                        <polygon ref={svg2} className=" " points=" 51,190 250,190  150,20 50,190" fill="transparent" stroke="#400D51" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
+                                    </svg>
+                                </div>
                               </div>
 
         </div>
