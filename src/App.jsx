@@ -12,22 +12,38 @@ function App() {
  const [p,setP] = useState(0)
  const [a,setA] = useState(0)
  const [h,setH] = useState(0)
+ const [c,setC] = useState(0)
+ const [he,setHe] = useState(window.innerWidth)
  const pro = useRef(null)
 
-
+ const handleR = ()=>{
+     console.log('resie')
+     setH(window.innerHeight)
+     setP(document.getElementById('Projects').offsetTop)
+     setH(document.getElementById('Home').offsetTop)
+     setA(document.getElementById('Abouts').offsetTop)
+     setC(document.getElementById('Contact').offsetTop)
+ }
 
  useEffect(()=>{
      
+     window.addEventListener('resize',handleR)
+     return ()=>{
+             window.removeEventListener('resize',handleR)
+     }
 
-     
+ },[he])
+
+ useEffect(()=>{
      window.scrollTo({top:0})
      setP(document.getElementById('Projects').offsetTop)
      setH(document.getElementById('Home').offsetTop)
      setA(document.getElementById('Abouts').offsetTop)
+     setC(document.getElementById('Contact').offsetTop)
  })
 
  return(<>
-     <NavLayout p={p} h={h} a={a}></NavLayout>
+     <NavLayout p={p} h={h} a={a} c={c}></NavLayout>
      <div className=' px-[2%] flex flex-col items-center'>
           <ParallaxProvider>
                <Header p={p}></Header>

@@ -12,7 +12,7 @@ function AboutLayout() {
                 </label> 
             </div>
         </div>
-        <div className='z-[10] px-[5%]'>
+        <div className='z-[10]'>
             <AboutHeader></AboutHeader>
             <Skills></Skills>
         </div>

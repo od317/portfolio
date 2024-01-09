@@ -1,14 +1,62 @@
-import React from 'react'
+import React,{useEffect,useRef} from 'react'
+
+
 
 function Icons() {
+
+  const react = useRef(null)
+  const tail = useRef(null)
+  const js = useRef(null)
+  const css = useRef(null)
+  const html = useRef(null)
+  const node = useRef(null)
+
+    
+  const handleMouseMove = (event)=>{
+        const x = event.pageX/-30
+        const y = event.pageY/-30
+        if(react.current&&tail.current&&js.current&&css.current&&html.current&&node.current){
+ 
+           react.current.style.top = y+'px'
+           react.current.style.left = x+'px'
+
+           tail.current.style.top = -y+'px'
+           tail.current.style.left = -x+'px'
+
+           css.current.style.top = x+'px'
+           css.current.style.left = y+'px'
+
+           html.current.style.top = -x+'px'
+           html.current.style.left = y+'px'
+
+           js.current.style.top = y+'px'
+           js.current.style.left = -x+'px'
+
+
+           node.current.style.top = -y+'px'
+           node.current.style.left = x+'px'
+
+
+        }
+  
+        }
+
+  useEffect(()=>{
+
+    window.addEventListener('mousemove',handleMouseMove)
+    return ()=>{
+           window.removeEventListener('mousemove',handleMouseMove)
+    }
+  },[])
   return (
     <div className=" w-full relative">
-        <div className='w-full  flex flex-row justify-start h-full '>
+        <div className='w-full pb-[30%] relative h-full '>
                     {/* react icon */}
                     <svg 
+                        ref={react}
                         viewBox="0 0 34 32"
                         fill="#00d8ff"
-                        className="w-[15%] h-[15%]"
+                        className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[40%] translate-y-[10%]"
                         >
                         <path
                             
@@ -21,15 +69,17 @@ function Icons() {
                     </svg>
                     {/* tailwind icon */}
                     <svg
+                    ref={tail}
                     viewBox="0 0 24 24"
                     fill="#00b6d6"
-                    className="w-[15%] h-[15%]"
+                    className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[200%] translate-y-[30%]"
                     >
                     <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z" />
                     </svg>
                     {/* javascript */}
                     <svg
-                        className="w-[15%] h-[15%]"
+                        ref={js}
+                        className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[260%] translate-y-[180%]"
                         viewBox="0 0 512 512"
                         fill="#f0db4e"
                         >
@@ -37,7 +87,8 @@ function Icons() {
                     </svg>
                     {/* css */}
                     <svg
-                    className="w-[15%] h-[15%]"
+                    ref={css}
+                    className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[340%] translate-y-[40%]"
                     viewBox="0 0 24 24"
                     fill="#2298f8"
                     >
@@ -45,17 +96,19 @@ function Icons() {
                     </svg>
                     {/* html */}
                     <svg
+                        ref={html}
                         viewBox="0 0 1024 1024"
                         fill="#fe5722"
-                        className="w-[15%] h-[15%]"
+                        className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[80%] translate-y-[210%]"
                         >
                         <path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z" />
                     </svg>
                     {/* node js */}
                     <svg
+                        ref={node}
                         viewBox="0 0 24 24"
                         fill="#90c63d"
-                        className="w-[15%] h-[15%]"
+                        className="w-[20%] absolute h-[20%] transition-all ease-linear translate-x-[240%] translate-y-[310%]"
                         >
                         <path d="M12 21.985c-.275 0-.532-.074-.772-.202l-2.439-1.448c-.365-.203-.182-.277-.072-.314.496-.165.588-.201 1.101-.493.056-.037.129-.02.185.017l1.87 1.12c.074.036.166.036.221 0l7.319-4.237c.074-.036.11-.11.11-.202V7.768c0-.091-.036-.165-.11-.201l-7.319-4.219c-.073-.037-.165-.037-.221 0L4.552 7.566c-.073.036-.11.129-.11.201v8.457c0 .073.037.166.11.202l2 1.157c1.082.548 1.762-.095 1.762-.735V8.502c0-.11.091-.221.22-.221h.936c.108 0 .22.092.22.221v8.347c0 1.449-.788 2.294-2.164 2.294-.422 0-.752 0-1.688-.46l-1.925-1.099a1.55 1.55 0 01-.771-1.34V7.786c0-.55.293-1.064.771-1.339l7.316-4.237a1.637 1.637 0 011.544 0l7.317 4.237c.479.274.771.789.771 1.339v8.458c0 .549-.293 1.063-.771 1.34l-7.317 4.236c-.241.11-.516.165-.773.165zm2.256-5.816c-3.21 0-3.87-1.468-3.87-2.714 0-.11.092-.221.22-.221h.954c.11 0 .201.073.201.184.147.971.568 1.449 2.514 1.449 1.54 0 2.202-.35 2.202-1.175 0-.477-.185-.825-2.587-1.063-1.999-.2-3.246-.643-3.246-2.238 0-1.485 1.247-2.366 3.339-2.366 2.347 0 3.503.809 3.649 2.568a.297.297 0 01-.056.165c-.037.036-.091.073-.146.073h-.953a.212.212 0 01-.202-.164c-.221-1.012-.789-1.34-2.292-1.34-1.689 0-1.891.587-1.891 1.027 0 .531.237.696 2.514.99 2.256.293 3.32.715 3.32 2.294-.02 1.615-1.339 2.531-3.67 2.531z" />
                     </svg>
