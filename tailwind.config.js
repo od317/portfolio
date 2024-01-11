@@ -14,7 +14,8 @@ export default {
        'dark':{
         1:'#121212'
        },
-       'theme':'#0E8388'
+       'theme':'#0079FF',
+       'theme2':'#FF004D'
     },
     extend: {
       animation: {

@@ -7,26 +7,31 @@ import NordStrom from "../../assets/imgs/NordStrom.jpg"
 import PhotosWeb from "../../assets/imgs/PhotosWeb.jpg"
 import WeatherWeb from "../../assets/imgs/WeatherWeb.jpg"
 import Dsh from "../../hooks/DrawingSvgHook"
+import nordstromVideo from "../../assets/videos/nordstrom.mp4"
 
 const projects = [
   {
     name:'nordstrom',
     img:NordStrom,
+    video:nordstromVideo,
     link:"https://nordstromcloneod317.netlify.app/"
   },
   {
     name:'photos',
     img:PhotosWeb,
+    video:nordstromVideo,
     link:"https://photoswebsite.netlify.app/"
   },
   {
     name:'Weather',
     img:WeatherWeb,
+    video:nordstromVideo,
     link:"https://comforting-twilight-2c2f14.netlify.app/"
   },
   {
     name:'nordstrom',
     img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg",
+    video:nordstromVideo,
     link:"https://nordstromcloneod317.netlify.app/"
   }
 ]
@@ -77,19 +82,19 @@ function ProjectsLayout() {
   return (
     <>
         
-        <div id='Projects' className=" sm:sticky sm:top-[0%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] md:pb-[15%] pb-[30%]  pt-[15%]">
+        <div id='Projects' className=" sm:sticky sm:top-[0%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] md:pb-[15%] pb-[30%]  pt-[15%]">           
                               <div  className="  relative text-theme w-full  text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
-                                <label id='svg2' className='z-[10] ' htmlFor="">
+                                <label id='svg2' className='z-[10] bg-dark-1 px-[.2%]' htmlFor="">
                                    Projects
                                 </label> 
-                                <div  className=' absolute translate-y-[10%] translate-x-[20%] ' >
+                                <div  className=' absolute translate-y-[0%] translate-x-[20%] ' >
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
-                                        <polygon ref={svg1} className=" " points=" 150,190 50,20 51,20 250,20   " fill="transparent" stroke="#400D51" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
+                                        <polygon ref={svg1} className=" " points=" 151,191 50,20 250,20  " fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
                                 </div>
-                                <div  className=' absolute translate-y-[-67%] translate-x-[-20%]' >
+                                <div  className=' absolute translate-y-[-57%] translate-x-[-20%]' >
                                     <svg  className=" relative w-full text-cneter flex items-cneter  justify-center " width="300" height="200">
-                                        <polygon ref={svg2} className=" " points=" 51,190 250,190  150,20 50,190" fill="transparent" stroke="#400D51" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
+                                        <polygon ref={svg2} className=" " points="  151,20 250,190 51,190 50,190" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
                                 </div>
                               </div>
@@ -127,7 +132,6 @@ function ProjectsLayout() {
         <Project project={projects[1]}></Project>
         <Project project={projects[2]}></Project>
         <Project project={projects[3]}></Project>
-
         </div>
 
     </>

@@ -16,7 +16,7 @@ function AboutLayout() {
                 </label> 
                 <div  className=' absolute translate-y-[-27%] ' >
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
-                                        <polygon ref={svg} className="" points="51,20 250,20  150,190 50,20" fill="transparent" stroke="#0E8388" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
+                                        <polygon ref={svg} className="" points="51,20 250,20  150,190 50,20" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
                 </div>
             </div>

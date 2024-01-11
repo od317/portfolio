@@ -4,8 +4,8 @@ export default function draw(svg,v,id){
     const [ypos,setYpos] = useState(0)
 
     function handleAnimation(){
-        console.log(id,window.scrollY,pageYOffset,document.getElementById(id).getBoundingClientRect().top*3)
         let diff = window.scrollY - document.getElementById(id).getBoundingClientRect().top*3
+        diff = id === "svg2" ? diff/3: diff
         let val = diff >=50 ? v - ((diff-50)) : v
         val = Math.max(val,0)
         svg.current.style.strokeDashoffset=val

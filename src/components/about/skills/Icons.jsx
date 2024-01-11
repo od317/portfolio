@@ -14,7 +14,7 @@ function Icons() {
     
   const handleMouseMove = (event)=>{
         const x = event.pageX/30-12.5
-        const y = event.pageY/30-5
+        const y = event.pageY/30-10
         // console.log(x,y)
         if(react.current&&tail.current&&js.current&&css.current&&html.current&&node.current){
  
@@ -22,7 +22,7 @@ function Icons() {
            
            tail.current.style.transform = `rotateX(-${y}deg) rotateY(${x}deg)`
 
-           css.current.style.transform = `rotateX(-${y}deg) rotateY(${x}deg) `
+           css.current.style.transform = `rotateX(-${y}deg) rotateY(${x-25}deg) `
 
            html.current.style.transform = `rotateX(-${y}deg) rotateY(${x}deg) `
 
