@@ -17,7 +17,7 @@ function Project({project}) {
                 v.current.pause()
                 v.current.style.opacity="0%"
               }}
-              ref={v} className='min-w-full w-[200%] min-h-full absolute opacity-0 transition-all object-fill ' src={project.video} autoplay type='video/mp4'  />
+              ref={v} className='min-w-full w-[200%] min-h-full absolute opacity-0 transition-all object-fill ' src={project.video}  type='video/mp4'  />
           </Link>  
             <div className="flex flex-row text-white capitalize py-[3%] px-[2%] bg-dark-1 border-b-[1px] border-b-theme">{project.name}</div>
         </div>
