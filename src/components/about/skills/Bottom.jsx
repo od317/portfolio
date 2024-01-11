@@ -1,5 +1,6 @@
 import React,{useEffect,useRef} from 'react'
 import { gsap } from "gsap"
+import Icons from './Icons'
 
 function Bottom() {
 
@@ -20,10 +21,17 @@ function Bottom() {
   },[])
 
   return (
-    <div className='w-full flex  justify-end'>
-      <div className='w-[70%] flex flex-row border-t-[1px] border-theme'>
+    <div className='w-full flex bg-dark-1 justify-end'>
+      <div className='  lg:w-[70%] flex sm:flex-row flex-col md:border-t-[1px] border-theme'>
         
-        <div style={{transform:'rotateX(90deg)',transformOrigin:'top'}} ref={d} className=' w-[40%] pb-[55%] transition-all duration-[1000ms] bg-dark-1 bg-[url("https://hitmanforum-v6-s3-uploads.s3.dualstack.us-west-1.amazonaws.com/original/3X/c/9/c966f7639be7ac0114d6a871876dbc9769e49b9e.jpeg")] text-[90%]  '>
+        <div style={{transform:'rotateX(90deg)',transformOrigin:'top'}} ref={d} className=' sm:w-[40%] w-[100%] pb-[40%] relative transition-all duration-[1000ms] bg-cover bg-dark-1  text-[90%]  '>
+        
+          <Icons></Icons>
+
+        </div>
+
+        <div className='sm:w-[60%] w-[100%] text-[60%] px-[0%] md:text-[70%] flex items-center justiy-center'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam debitis accusamus omnis molestiae dignissimos necessitatibus eveniet quos aut fugiat obcaecati magnam laudantium voluptate, velit suscipit consequuntur ullam asperiores possimus.
         </div>
 
 

@@ -39,7 +39,7 @@ function AboutHeader() {
     return (
             <div id="" className='w-full skillsContainer text-theme z-[10] bg-transparent 
                md:flex md:flex-row md:items-center md:justify-between md:pb-[20%]
-               grid grid-cols-2 gap-y-[15%] gap-x-[10%] pb-[60%]'>
+               grid grid-cols-2 gap-y-[15%] gap-x-[10%] pb-[30%]'>
                     
             <div style={{transform:"translateY(100%)",opacity:'0%'}} ref={s1} className=' md:w-[18%]  relative text-center text-[300%] flex flex-col items-center'>
                 <ion-icon name="timer-outline"></ion-icon>

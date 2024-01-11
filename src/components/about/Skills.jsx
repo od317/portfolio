@@ -7,8 +7,8 @@ function Skills() {
 
   return (
     <div className="flex w-full text-white text-[200%] flex-col">
-            {/* <Bottom></Bottom> */}
-            <Icons></Icons>
+            <Bottom></Bottom>
+            {/* <Icons></Icons> */}
     </div>
   )
 }
