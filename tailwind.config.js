@@ -14,7 +14,7 @@ export default {
        'dark':{
         1:'#121212'
        },
-       'theme':'#00B8A9',
+       'theme':'#00ADB5',
        'theme2':'#FF004D'
     },
     extend: {

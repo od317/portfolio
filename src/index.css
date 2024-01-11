@@ -29,7 +29,7 @@ button{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #0079FF;
+    background: #00ADB5;
     transition: all 200ms ease-in-out;
 }
  
