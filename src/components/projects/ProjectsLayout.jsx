@@ -83,7 +83,7 @@ function ProjectsLayout() {
     <>
         
         <div id='Projects' className=" sm:sticky sm:top-[0%] w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] md:pb-[15%] pb-[30%] pt-[15%]">           
-                              <div  className="  relative text-theme w-full  text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
+                              <div  className=" relative text-theme w-full  text-cneter flex justify-center after:z-[-1] after:absolute after:w-full after:h-[100rem] after:bg-dark-1 after:content-['_']"> 
                                 <label id='svg2' className='z-[10] bg-dark-1 px-[.2%]' htmlFor="">
                                    Projects
                                 </label> 
