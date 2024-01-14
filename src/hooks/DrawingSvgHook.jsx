@@ -5,7 +5,7 @@ export default function draw(svg,v,id){
 
     function handleAnimation(){
         let diff = window.scrollY - document.getElementById(id).getBoundingClientRect().top*3
-        console.log(id+" "+document.getElementById(id).getBoundingClientRect().top+" "+window.scrollY)
+        if(id==='svg1') console.log(id+" "+document.getElementById(id).getBoundingClientRect().top+" "+window.scrollY)
         diff = id === "svg2" || id === "svg4" ? diff/3 : diff
         let val = diff >=50 ? v - ((diff-50)) : v
         val = Math.max(val,0)

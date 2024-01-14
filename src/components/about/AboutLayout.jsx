@@ -6,7 +6,7 @@ function AboutLayout() {
   
   const svg = useRef()
   Dsh(svg,900,"svg1")
-
+  
   return (
     <>
         <div id='Abouts' className=" sm:sticky sm:top-[0%]  w-full flex-col  bg-dark-1 border-t-[1px] border-theme  flex items-center justify-center  text-white text-[350%] pb-[15%]  pt-[15%]">
