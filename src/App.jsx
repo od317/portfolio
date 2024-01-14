@@ -26,7 +26,7 @@ function App() {
  }
 
  useEffect(()=>{
-     
+     window.scrollTo({top:0})
      window.addEventListener('resize',handleR)
      return ()=>{
              window.removeEventListener('resize',handleR)
@@ -35,7 +35,6 @@ function App() {
  },[he])
 
  useEffect(()=>{
-     window.scrollTo({top:0})
      setP(document.getElementById('Projects').offsetTop)
      setH(document.getElementById('Home').offsetTop)
      setA(document.getElementById('Abouts').offsetTop)

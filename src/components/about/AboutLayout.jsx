@@ -21,7 +21,7 @@ function AboutLayout() {
                 </div>
             </div>
         </div>
-        <div className='z-[10]'>
+        <div className='z-[10] pb-[25%] sm:pb-[0%]'>
             <AboutHeader></AboutHeader>
             <Skills></Skills>
         </div>
