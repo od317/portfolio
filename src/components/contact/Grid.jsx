@@ -8,7 +8,7 @@ function Grid({title,text}) {
       const io = new IntersectionObserver((entries)=>{
             const [entry] = entries
             if(entry.isIntersecting){
-               gsap.fromTo(ref.current,{scale:0},{scale:1.13,duration:.35})
+               gsap.fromTo(ref.current,{scale:0},{scale:1.11,duration:.35})
                gsap.to(ref.current,{scale:1,duration:.35,delay:.35})
                ref.current = null
             }

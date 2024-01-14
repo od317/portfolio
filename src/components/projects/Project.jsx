@@ -7,7 +7,7 @@ function Project({project}) {
   },[v])
   return (
         <div className=' relative w-full flex flex-col'>
-          <Link to={project.link} className='w-full outline-none pb-[55%] relative overflow-hidden'>
+          <Link to={project.link} className='w-full bg-zinc-900 outline-none pb-[55%] relative overflow-hidden'>
             <img className='w-full min-h-full transition-all duration-200 absolute' src={project.img}  alt="" />
             <video onMouseOver={()=>{
                 v.current.play()
