@@ -2,6 +2,8 @@ import React from 'react'
 import Grid from './Grid'
 
 function ContactLayout() {
+  const t1 = "osamadrbas31@gmail.com"
+  const t2 = "0994307669"
   return (
     
     <>
@@ -11,8 +13,8 @@ function ContactLayout() {
 
     <div className='  flex md:flex-row flex-col w-full z-[8] pb-[10%] text-white justify-evenly '>
 
-              <Grid></Grid>
-              <Grid></Grid>
+              <Grid title="Gmail" text={t1} ></Grid>
+              <Grid title="phone" text={t2} ></Grid>
 
     </div>
 
