@@ -46,7 +46,7 @@ function HeaderButton({ p }) {
                 onMouseOver={mouseOverFun}
                 onMouseLeave={mouseLeaveFun}
                 onClick={() => {
-                    window.scrollTo({ top: p, behavior: 'smooth' })
+                    window.scrollTo({top:window.innerWidth>=640 ? p+100:p,behavior: 'smooth'})
                 }}
 
                 className="w-[22%] pb-[22%] md:w-[10%] md:pb-[10%]  translate-y-[122%]  absolute z-20  rounded-full">

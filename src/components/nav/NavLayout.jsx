@@ -51,10 +51,10 @@ function NavLayout({h,p,a,c}) {
                     window.scrollTo({top:a,behavior: 'smooth'})
                }}>About</button>
                <button className={` outline-none  ${page == "Projects" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:window.innerWidth>=640 ? p+100:p,behavior: 'smooth'})
+                    window.scrollTo({top:window.innerWidth>=0 ? p+100:p,behavior: 'smooth'})
                }}>Projects</button>
                <button className={` outline-none  ${page == "Contact" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:window.innerWidth>=640 ? c+100:c,behavior: 'smooth'})
+                    window.scrollTo({top:window.innerWidth>=0 ? c+100:c,behavior: 'smooth'})
                }}>Contact</button>
           </div> 
     </div>
