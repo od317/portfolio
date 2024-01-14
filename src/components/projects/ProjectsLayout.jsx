@@ -85,12 +85,12 @@ function ProjectsLayout() {
                                 <label id='svg2' className='z-[10] bg-dark-1 px-[.2%]' htmlFor="">
                                    Projects
                                 </label> 
-                                <div  className=' absolute translate-y-[0%] translate-x-[20%] ' >
+                                <div  className=' hidden sm:block absolute translate-y-[0%] translate-x-[20%] ' >
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
                                         <polygon ref={svg1} className=" " points=" 151,191 50,20 250,20  " fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
                                 </div>
-                                <div  className=' absolute translate-y-[-57%] translate-x-[-20%]' >
+                                <div  className=' hidden sm:block absolute translate-y-[-57%] translate-x-[-20%]' >
                                     <svg  className=" relative w-full text-cneter flex items-cneter  justify-center " width="300" height="200">
                                         <polygon ref={svg2} className=" " points="  151,20 250,190 51,190 50,190" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
