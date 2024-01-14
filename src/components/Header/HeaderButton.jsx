@@ -1,5 +1,4 @@
 import React,{useRef,useEffect, useState} from 'react'
-import {gsap} from "gsap"
 
 function HeaderButton({ p }) {
     const projectButton = useRef(null)

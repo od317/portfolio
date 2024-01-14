@@ -1,7 +1,5 @@
 import React,{useLayoutEffect,useState,useEffect,useRef} from 'react'
 import { Parallax } from 'react-scroll-parallax'
-import { gsap} from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Project from "./Project"
 import NordStrom from "../../assets/imgs/NordStrom.jpg"
 import PhotosWeb from "../../assets/imgs/PhotosWeb.jpg"
