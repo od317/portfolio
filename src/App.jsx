@@ -1,4 +1,4 @@
-import React, { useRef,useState } from 'react'
+import React, { useContext, useRef,useState } from 'react'
 import {useEffect} from 'react'
 import Blobs from './components/blobs/Blobs'
 import Header from './components/Header/Header'
@@ -7,22 +7,24 @@ import ProjectsLayout from './components/projects/ProjectsLayout'
 import ContactLayout from './components/contact/ContactLayout'
 import NavLayout from './components/nav/NavLayout'
 import AboutLayout from './components/about/AboutLayout'
+import { posContext } from './context/PositionContext'
 
 function App() {
- const [p,setP] = useState(0)
- const [a,setA] = useState(0)
- const [h,setH] = useState(0)
- const [c,setC] = useState(0)
+ const [pos,setPos] = useState(null)
  const [he,setHe] = useState(window.innerWidth)
  const pro = useRef(null)
-
+ 
  const handleR = ()=>{
-     console.log('resie')
-     setH(window.innerHeight)
-     setP(document.getElementById('Projects').offsetTop)
-     setH(document.getElementById('Home').offsetTop)
-     setA(document.getElementById('Abouts').offsetTop)
-     setC(document.getElementById('Contact').offsetTop)
+    console.log('resi')
+    setHe(window.innerWidth)
+    setPos(
+    {
+            h:document.getElementById('Home').offsetTop,
+            a:document.getElementById('Abouts').offsetTop,
+            p:document.getElementById('Projects').offsetTop,
+            c:document.getElementById('Contact').offsetTop,
+        }
+   )
  }
 
  useEffect(()=>{
@@ -31,26 +33,29 @@ function App() {
      return ()=>{
              window.removeEventListener('resize',handleR)
      }
-
  },[he])
 
  useEffect(()=>{
-     setP(document.getElementById('Projects').offsetTop)
-     setH(document.getElementById('Home').offsetTop)
-     setA(document.getElementById('Abouts').offsetTop)
-     setC(document.getElementById('Contact').offsetTop)
- })
+            setPos({
+                    h:document.getElementById('Home').offsetTop,
+                    a:document.getElementById('Abouts').offsetTop,
+                    p:document.getElementById('Projects').offsetTop,
+                    c:document.getElementById('Contact').offsetTop,
+                  })
+ },[])
 
  return(<>
-     <NavLayout p={p} h={h} a={a} c={c}></NavLayout>
+    <posContext.Provider value={pos}>
+     <NavLayout></NavLayout>
      <div className=' px-[2%] flex flex-col items-center'>
           <ParallaxProvider>
-               <Header p={p}></Header>
+               <Header></Header>
                <AboutLayout></AboutLayout>
                <ProjectsLayout></ProjectsLayout>
                <ContactLayout></ContactLayout>
           </ParallaxProvider>
      </div>
+     </posContext.Provider>
      </>)
 }
 

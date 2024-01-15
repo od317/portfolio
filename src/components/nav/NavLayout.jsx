@@ -1,8 +1,10 @@
-import React, {useState,useEffect} from 'react'
-function NavLayout({h,p,a,c}) {
+import React, {useState,useEffect, useContext} from 'react'
+import { posContext } from '../../context/PositionContext'
+
+function NavLayout() {
   const [ty,setTy] = useState(false)
   const [page,setP] = useState("Home")
-
+  const pc = useContext(posContext)
 
   const inter = ()=>{
         if(window.pageYOffset>=document.getElementById('Contact').offsetTop){
@@ -37,7 +39,6 @@ function NavLayout({h,p,a,c}) {
    },[ty])
 
 
-
   return (<>    
     <div className={`text-white text-center  w-[97%] fixed bg-dark1 
     before:translate-x-[-48.5%] ${ !ty? "sm:before:translate-y-[-120%]":"" } 
@@ -45,16 +46,16 @@ function NavLayout({h,p,a,c}) {
     before:border-b-[1px] before:border-b-theme px-[2%] z-[20] before:transition-all before:duration-200 `}>
           <div className="  text-white flex flex-row justify-evenly items-center pt-[3%] pb-[3%] sm:pt-[1.5%] sm:pb-[1.5%] z-[10]  ">
                <button className={` outline-none  ${page == "Home" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:h,behavior: 'smooth'})
+                    window.scrollTo({top:pc.h,behavior: 'smooth'})
                }}>Home</button>
                <button className={` outline-none  ${page == "Abouts" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:a,behavior: 'smooth'})
+                    window.scrollTo({top:pc.a,behavior: 'smooth'})
                }}>About</button>
                <button className={` outline-none  ${page == "Projects" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:window.innerWidth>=0 ? p+100:p,behavior: 'smooth'})
+                    window.scrollTo({top:pc.p,behavior: 'smooth'})
                }}>Projects</button>
                <button className={` outline-none  ${page == "Contact" ? ' text-theme ':' text-white ' } transition-all duration-200 `} onClick={()=>{
-                    window.scrollTo({top:window.innerWidth>=0 ? c+100:c,behavior: 'smooth'})
+                    window.scrollTo({top:pc.c,behavior: 'smooth'})
                }}>Contact</button>
           </div> 
     </div>

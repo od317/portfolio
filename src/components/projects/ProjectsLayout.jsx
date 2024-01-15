@@ -63,9 +63,6 @@ function ProjectsLayout() {
 
 
 
-  Dsh(svg1,900,"svg2")
-  Dsh(svg2,900,"svg2")
-
   useEffect(()=>{
           ref.current.style.visibility= 'hidden'
           setTimeout(()=>{
@@ -95,7 +92,7 @@ function ProjectsLayout() {
                                         <polygon ref={svg2} className=" " points="  151,20 250,190 51,190 50,190" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
                                 </div> */}
-                                <div  className=' hidden sm:block absolute translate-y-[-57%] translate-x-[-20%] ' >
+                                {/* <div  className=' hidden sm:block absolute translate-y-[-57%] translate-x-[-20%] ' >
                                     <svg  className=" relative w-full rotate-180  text-cneter flex items-cneter  justify-center " width="300" height="200">
                                         <polygon ref={svg1} className="" points="51,20 250,20  150,190 50,20" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
@@ -104,7 +101,7 @@ function ProjectsLayout() {
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
                                         <polygon ref={svg2} className="" points="51,20 250,20  150,190 50,20" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
-                                </div>
+                                </div> */}
                               </div>
 
         </div>
@@ -134,7 +131,7 @@ function ProjectsLayout() {
         </div>
         </div>
 
-        <div className='grid grid-cols-1 pb-[30%] gap-y-[5%] gap-x-[2%] 
+        <div className='grid grid-cols-1  pb-[30%] gap-y-[5%] gap-x-[2%] 
          md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] w-full lg:hidden'>
         <Project project={projects[0]}></Project>
         <Project project={projects[1]}></Project>

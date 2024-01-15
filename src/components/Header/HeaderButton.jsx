@@ -1,11 +1,13 @@
 import React,{useRef,useEffect, useState} from 'react'
 
-function HeaderButton({ p }) {
+function HeaderButton() {
     const projectButton = useRef(null)
     const projectButtonText = useRef(null)
     const hoveredButton = useRef(null)
     const [permission,setPermission] = useState(false)
     const circleSvg = useRef(null)
+
+    const p = 0
 
     let mouseOverFun = ()=>{
         if(!permission)

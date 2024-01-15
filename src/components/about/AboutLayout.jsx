@@ -5,7 +5,6 @@ import Dsh from '../../hooks/DrawingSvgHook'
 function AboutLayout() {
   
   const svg = useRef()
-  Dsh(svg,900,"svg1")
   
   return (
     <>
@@ -14,11 +13,11 @@ function AboutLayout() {
                 <label id='svg1' className='z-[10] bg-dark-1 w-[100%] text-center text-theme' htmlFor="">
                     About
                 </label> 
-                <div  className=' hidden sm:block absolute translate-y-[-27%] ' >
+                {/* <div  className=' hidden sm:block absolute translate-y-[-27%] ' >
                                     <svg  className=" relative w-full  text-cneter flex items-cneter  justify-center " width="300" height="200">
                                         <polygon ref={svg} className="" points="51,20 250,20  150,190 50,20" fill="transparent" stroke="#FF004D" strokeWidth="5" strokeDashoffset="900" strokeDasharray="900"  fillRule="evenodd"/>
                                     </svg>
-                </div>
+                </div> */}
             </div>
         </div>
         <div className='z-[10] pb-[25%] sm:pb-[0%]'>

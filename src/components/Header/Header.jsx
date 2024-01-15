@@ -4,11 +4,11 @@ import Blobs from '../blobs/Blobs'
 import { useWindowScroll } from "@uidotdev/usehooks"
 
 
-function Header({p}) {
+function Header() {
     
     return (<>
 
-      <HeaderText p={p}></HeaderText> 
+      <HeaderText></HeaderText> 
       
       </>
     )
