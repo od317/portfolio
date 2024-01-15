@@ -28,7 +28,6 @@ function App() {
  }
 
  useEffect(()=>{
-     window.scrollTo({top:0})
      window.addEventListener('resize',handleR)
      return ()=>{
              window.removeEventListener('resize',handleR)
@@ -36,6 +35,7 @@ function App() {
  },[he])
 
  useEffect(()=>{
+            window.scrollTo({top:0})
             setPos({
                     h:document.getElementById('Home').offsetTop,
                     a:document.getElementById('Abouts').offsetTop,
