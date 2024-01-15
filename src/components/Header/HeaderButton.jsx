@@ -1,5 +1,5 @@
-import React,{useRef,useEffect, useState} from 'react'
-
+import React,{useRef,useEffect, useState,useContext} from 'react'
+import {posContext} from '../../context/PositionContext'
 function HeaderButton() {
     const projectButton = useRef(null)
     const projectButtonText = useRef(null)
@@ -7,7 +7,7 @@ function HeaderButton() {
     const [permission,setPermission] = useState(false)
     const circleSvg = useRef(null)
 
-    const p = 0
+    let pc = useContext(posContext)
 
     let mouseOverFun = ()=>{
         if(!permission)
@@ -48,7 +48,7 @@ function HeaderButton() {
                 onMouseOver={mouseOverFun}
                 onMouseLeave={mouseLeaveFun}
                 onClick={() => {
-                    window.scrollTo({top:window.innerWidth>=640 ? p+100:p,behavior: 'smooth'})
+                    window.scrollTo({top:window.innerWidth>=640 ? pc.p+100:p,behavior: 'smooth'})
                 }}
 
                 className="w-[22%] pb-[22%] md:w-[10%] md:pb-[10%]  translate-y-[122%]  absolute z-20  rounded-full">
