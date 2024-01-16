@@ -8,12 +8,14 @@ function Grid({title,text}) {
       const io = new IntersectionObserver((entries)=>{
             const [entry] = entries
             if(entry.isIntersecting){
-               gsap.fromTo(ref.current,{scale:0},{scale:1.1,duration:.2})
-               gsap.to(ref.current,{scale:1,duration:.2,delay:.2})
+               gsap.fromTo(ref.current,{translateX: title==='Gmail' ?'-50%':'50%',opacity:'0%'},{translateX:'0%',opacity:"100%",duration:1,delay:.3})
                ref.current = null
             }
       },options)
       if(ref.current) io.observe(ref.current)
+      return()=>{
+             io.unobserve(ref.current)
+      }
   },[])
   return (
     <div 
@@ -21,7 +23,7 @@ function Grid({title,text}) {
       // gsap.to(ref.current,{scale:1})
     }}
     ref={ref}
-    style={{scale:0}}
+    style={{opacity:'0%'}}
     className='md:w-[40%] p-[20%] md:p-[10%] overflow-hidden group flex flex-col items-center relative mt-[10%]
                sm:mt-[0%] justify-center border-theme border-[1px] bg-dark-1
                '>
