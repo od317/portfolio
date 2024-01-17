@@ -133,10 +133,11 @@ function ProjectsLayout() {
 
         <div className='grid grid-cols-1  pb-[60%] gap-y-[5%] gap-x-[2%] 
          md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] w-full lg:hidden'>
-        <Project project={projects[0]}></Project>
-        <Project project={projects[1]}></Project>
-        <Project project={projects[2]}></Project>
-        <Project project={projects[3]}></Project>
+        {projects.map((v,i)=>{
+          return(
+                <Project key={i} project={v}></Project>
+          )
+        })}
         </div>
 
     </>
