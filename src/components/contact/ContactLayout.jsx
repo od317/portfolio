@@ -28,7 +28,7 @@ function ContactLayout() {
 
     </div>
 
-    <div className='  flex md:flex-row flex-col w-full z-[8] pb-[50%] text-white justify-evenly '>
+    <div className='  flex md:flex-row flex-col w-full max-w-screen overflow-hidden z-[8] pb-[50%] text-white justify-evenly '>
               <Grid title="Gmail" text={t1} ></Grid>
               <Grid title="phone" text={t2} ></Grid>
     </div>

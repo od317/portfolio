@@ -9,13 +9,13 @@ import nordstromVideo from "../../assets/videos/nordstrom.mp4"
 
 const projects = [
   {
-    name:'nordstrom',
+    name:'Nordstrom',
     img:NordStrom,
     video:nordstromVideo,
     link:"https://nordstromcloneod317.netlify.app/"
   },
   {
-    name:'photos',
+    name:'Photos',
     img:PhotosWeb,
     video:nordstromVideo,
     link:"https://photoswebsite.netlify.app/"
@@ -27,7 +27,7 @@ const projects = [
     link:"https://comforting-twilight-2c2f14.netlify.app/"
   },
   {
-    name:'nordstrom',
+    name:'Nordstrom',
     img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg",
     video:nordstromVideo,
     link:"https://nordstromcloneod317.netlify.app/"
@@ -131,7 +131,7 @@ function ProjectsLayout() {
         </div>
         </div>
 
-        <div className='grid grid-cols-1  pb-[30%] gap-y-[5%] gap-x-[2%] 
+        <div className='grid grid-cols-1  pb-[60%] gap-y-[5%] gap-x-[2%] 
          md:pb-[15%] md:grid-cols-2 md:gap-y-[15%] w-full lg:hidden'>
         <Project project={projects[0]}></Project>
         <Project project={projects[1]}></Project>
