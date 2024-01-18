@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import React,{useEffect,useRef} from 'react'
+import BottomText from './BottomText'
 import Icons from './Icons'
 
 function Bottom() {
@@ -21,7 +22,7 @@ function Bottom() {
 
         </div>
 
-        <div className='md:hidden flex my-[5%] flex-row justify-evenly'>
+        <div className='md:hidden flex my-[10%] flex-row justify-evenly'>
                     {/* react icon */}
                     <div className="">
                         <svg 
@@ -91,11 +92,8 @@ function Bottom() {
                     </div>
         </div>
 
-        <div className=' md:w-[70%] w-[100%] text-[60%] mb-[5%] px-[0%] md:text-[70%] flex items-center justiy-center text-center'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam debitis accusamus omnis molestiae dignissimos 
-              necessitatibus eveniet quos aut fugiat obcaecati magnam laudantium voluptate, velit suscipit consequuntur ullam asperiores 
-              possimus.
-        </div>
+
+        <BottomText></BottomText>
 
 
 
