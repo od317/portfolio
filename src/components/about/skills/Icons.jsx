@@ -1,8 +1,9 @@
 import React,{useEffect,useRef} from 'react'
-
-
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 
 function Icons() {
+  gsap.registerPlugin(ScrollTrigger)
 
   const react = useRef(null)
   const tail = useRef(null)
@@ -31,13 +32,33 @@ function Icons() {
            node.current.style.transform = `rotateX(-${y}deg) rotateY(${x}deg)`
 
         }
+
+        else{
+ 
+            react.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+            
+            tail.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+ 
+            css.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+ 
+            html.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+ 
+            js.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+ 
+            node.current.style.transform = `rotateX(0deg) rotateY(0deg)`
+ 
+         }
   
         }
 
   useEffect(()=>{
     window.addEventListener('mousemove',handleMouseMove)
+    
+    const tl = gsap.timeline()
+
     return ()=>{
            window.removeEventListener('mousemove',handleMouseMove)
+           tl.revert()
     }
   },[])
   return (
