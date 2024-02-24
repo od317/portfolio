@@ -1,6 +1,5 @@
 import React, { useContext, useRef,useState } from 'react'
 import {useEffect} from 'react'
-import Blobs from './components/blobs/Blobs'
 import Header from './components/Header/Header'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import ProjectsLayout from './components/projects/ProjectsLayout'
@@ -15,7 +14,6 @@ function App() {
  const pro = useRef(null)
  
  const handleR = ()=>{
-    console.log('resi')
     setHe(window.innerWidth)
     setPos(
     {

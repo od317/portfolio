@@ -21,21 +21,27 @@ function Project({project}) {
   },[])
 
   return (
-        <div
-        onMouseOver={()=>{
-          v.current.play()
-          v.current.style.opacity="100%"
-        }} 
-        onMouseLeave={()=>{
-          v.current.pause()
-          v.current.style.opacity="0%"
-        }} className=' relative w-full flex flex-col group cursor-pointer'>
-          <Link to={project.link} className='w-full bg-zinc-900 outline-none pb-[55%] relative overflow-hidden'>
-            <img className='w-full min-h-full transition-all duration-200 absolute' src={project.img}  alt="" />
-            <video
-              ref={v} className='min-w-[130%]  absolute opacity-0 transition-all ' src={project.video}  type='video/mp4'  />
-          </Link>  
-            <div className="flex flex-row relative text-white overflow-hidden  capitalize  bg-dark-1 border-b-[1px] border-b-theme">
+
+    // onMouseOver={()=>{
+    //   v.current.play()
+    //   v.current.style.opacity="100%"
+    // }} 
+    // onMouseLeave={()=>{
+    //   v.current.pause()
+    //   v.current.style.opacity="0%"
+    // }}
+    // <video
+    // ref={v} className='min-w-[130%]  absolute opacity-0 transition-all ' src={project.video}  type='video/mp4'  />
+       
+    <div key={project.name}
+         className=' relative w-full flex flex-col group cursor-pointer'>
+          { project.link.length>0 ? <Link target='blank' to={project.link} className='w-full bg-zinc-900 outline-none pb-[55%] relative overflow-hidden'>
+            <img className='w-full min-h-full  transition-all duration-200 absolute' src={project.img}  alt="" />
+          </Link> : 
+          <div className='w-full bg-zinc-900 outline-none pb-[55%] relative overflow-hidden'>
+              <img className='w-full min-h-full  transition-all duration-200 absolute' src={project.img}  alt="" />
+          </div> }
+            <div className="flex flex-row  relative text-white overflow-hidden  capitalize  bg-dark-1 border-b-[1px] border-b-theme">
                    
                         <label className='w-full opacity-100 transition-all py-[2%] px-[2%]  md:group-hover:opacity-0 duration-[100ms]'  htmlFor="">
                             {project.name}

@@ -2,35 +2,31 @@ import React,{useLayoutEffect,useState,useEffect,useRef} from 'react'
 import { Parallax } from 'react-scroll-parallax'
 import Project from "./Project"
 import NordStrom from "../../assets/imgs/NordStrom.jpg"
-import PhotosWeb from "../../assets/imgs/PhotosWeb.jpg"
+import pClone from "../../assets/imgs/pClone.jpg"
 import WeatherWeb from "../../assets/imgs/WeatherWeb.jpg"
-import Dsh from "../../hooks/DrawingSvgHook"
-import nordstromVideo from "../../assets/videos/nordstrom.mp4"
+import Portfolio from "../../assets/imgs/Portfolio.jpg"
+
 
 const projects = [
   {
     name:'Nordstrom',
     img:NordStrom,
-    video:nordstromVideo,
     link:"https://nordstromcloneod317.netlify.app/"
   },
   {
-    name:'Photos',
-    img:PhotosWeb,
-    video:nordstromVideo,
-    link:"https://photoswebsite.netlify.app/"
+    name:'Portfolio',
+    img:Portfolio,
+    link:""
   },
   {
-    name:'Weather',
+    name:'WeatherApp',
     img:WeatherWeb,
-    video:nordstromVideo,
     link:"https://comforting-twilight-2c2f14.netlify.app/"
   },
   {
-    name:'Nordstrom',
-    img:"https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/03/Hitman-3-Dartmoor-Agent-47-At-Dartmoor-Mansion.jpg",
-    video:nordstromVideo,
-    link:"https://nordstromcloneod317.netlify.app/"
+    name:'CommingSoon',
+    img:pClone,
+    link:""
   }
 ]
 
@@ -106,7 +102,7 @@ function ProjectsLayout() {
 
         </div>
 
-        <div className='translate-y-[-10%]  pt-[2%] hidden lg:block '>
+        <div className='translate-y-[-10%] pb-[10%] pt-[2%] hidden lg:block '>
         <div  className='flex flex-row justify-evenly z-[6]  translate-y-[20%]  pb-[30%]   w-screen'>
                     <Parallax speed={-10} className='  z-[6] w-[40%]' >
                       <div onMouseOver={()=>{
@@ -124,7 +120,7 @@ function ProjectsLayout() {
                            <Project project={projects[2]}></Project>
                       </div>
                       <Parallax speed={-15} className='  w-[40%] z-[6] ' >
-                      <div  className="   h-[25rem] w-full"> 
+                      <div  className="  h-[25rem] w-full"> 
                            <Project project={projects[3]}></Project>
                       </div>
                     </Parallax>

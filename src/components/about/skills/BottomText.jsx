@@ -15,8 +15,7 @@ function BottomText() {
   return (
     <div className=' relative md:w-[70%] w-[100%] text-[80%] md:px-[5%] mb-[5%] px-[0%] md:text-[70%] flex items-center justiy-center text-center'>
            <label className=' relative ' htmlFor=""> 
-                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet magni dolorem corporis assumenda, praesentium ea eos illo! Eligendi sunt inventore corrupti. Ab cupiditate consequatur accusamus aperiam neque ullam deleniti? Vero.  
-                 {/* <svg className=' absolute translate-y-[-70%] ' height="200%" width="100%">
+           I have a great passion for web development. I mainly work with React but I always step out of my comfort zone to learn new things, encounter new problems and figure out the best way to solve them.                 {/* <svg className=' absolute translate-y-[-70%] ' height="200%" width="100%">
                        <polygon points="400,0 300,200 500,200" fill='none' stroke='#00ADB5' />
                  </svg> */}
            </label>

@@ -1,6 +1,5 @@
 import { document } from 'postcss'
 import React , { useRef,useEffect } from 'react'
-import Blobs from '../blobs/Blobs'
 import HeaderButton from './HeaderButton'
 
 function HeaderText({p}) {
