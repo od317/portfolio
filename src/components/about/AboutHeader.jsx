@@ -59,7 +59,7 @@ useEffect(()=>{
     return (
             <div id="" className='w-full skillsContainer text-theme z-[10] bg-transparent 
                md:flex md:flex-row md:items-center md:justify-between md:pb-[20%]
-               grid grid-cols-2 gap-y-[15%] gap-x-[10%] pb-[30%]'>
+               grid grid-cols-2 gap-y-[20%] gap-x-[10%] pb-[35%]'>
 
             <Fast s1={s1}></Fast>
 
