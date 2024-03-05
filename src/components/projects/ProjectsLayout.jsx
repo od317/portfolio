@@ -5,13 +5,18 @@ import NordStrom from "../../assets/imgs/NordStrom.jpg"
 import pClone from "../../assets/imgs/pClone.jpg"
 import WeatherWeb from "../../assets/imgs/WeatherWeb.jpg"
 import Portfolio from "../../assets/imgs/Portfolio.jpg"
-
+import PhotosWeb  from "../../assets/imgs/PhotosWeb.jpg"
 
 const projects = [
   {
     name:'Nordstrom',
     img:NordStrom,
     link:"https://nordstromcloneod317.netlify.app/"
+  },
+  {
+    name:'PhotosWeb',
+    img:PhotosWeb,
+    link:"https://photoswebsite11.netlify.app"
   },
   {
     name:'Portfolio',
@@ -27,7 +32,7 @@ const projects = [
     name:'CommingSoon',
     img:pClone,
     link:""
-  }
+  },
 ]
 
 import { useParallax } from 'react-scroll-parallax'
